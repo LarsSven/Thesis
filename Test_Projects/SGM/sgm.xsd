@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:annotation>
+    <xsd:appinfo>sgm.xsd v0.1 2003-01</xsd:appinfo>
+    <xsd:documentation>Copyright (c) 2003-2014 Schut Geometrical Metrology.</xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="data" type="dataType"/>
+
+  <xsd:complexType name="dataType">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="arr" type="arrayType"/>
+        <xsd:element name="sto" type="storableType"/>
+        <xsd:element name="cus" type="customizableType"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="dataTypeAttributes"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayBaseType">
+    <xsd:sequence>
+      <xsd:element name="elem" type="arrayElementType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="addr" type="addressType"     use="required"/>
+    <xsd:attribute name="size" type="xsd:unsignedInt" use="required"/>
+    <xsd:attribute name="duplicateIDs" type="xsd:boolean" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayType">
+    <xsd:complexContent>
+      <xsd:extension base="arrayBaseType">
+        <xsd:attribute name="uid" type="uidType" use="optional"/>
+        <xsd:attribute name="bwp" type="addressType" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="storableType">
+    <xsd:complexContent>
+      <xsd:extension base="arrayBaseType">
+        <xsd:attribute name="uid" type="uidType" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="customizableType">
+    <xsd:complexContent>
+      <xsd:extension base="arrayBaseType">
+        <xsd:attribute name="uid" type="uidType" use="required"/>
+        <xsd:attribute name="bwp" type="addressType" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayElementType">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="nil"         type="nilValueType"/>
+        <xsd:element name="bool"        type="boolValueType"/>
+        <xsd:element name="char"        type="charValueType"/>
+        <xsd:element name="uchar"       type="ucharValueType"/>
+        <xsd:element name="wchar"       type="wcharValueType"/>
+        <xsd:element name="short"       type="shortValueType"/>
+        <xsd:element name="ushort"      type="ushortValueType"/>
+        <xsd:element name="long"        type="longValueType"/>
+        <xsd:element name="ulong"       type="ulongValueType"/>
+        <xsd:element name="int"         type="intValueType"/>
+        <xsd:element name="uint"        type="uintValueType"/>
+        <xsd:element name="float"       type="floatValueType"/>
+        <xsd:element name="double"      type="doubleValueType"/>
+        <xsd:element name="string"      type="stringValueType"/>
+        <xsd:element name="wstring"     type="wstringValueType"/>
+        <xsd:element name="array"       type="arrayValueType"/>
+        <xsd:element name="storable"    type="storableValueType"/>
+        <xsd:element name="cust"        type="customizableValueType"/>
+        <xsd:element name="reference"   type="referenceValueType"/>
+        <xsd:element name="multidouble" type="multiDoubleValueType"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute name="idx" type="xsd:unsignedInt" use="required"/>
+  </xsd:complexType>
+
+  <xsd:attributeGroup name="valueTypeAttributes">
+    <xsd:attribute name="flags" type="xsd:short" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:simpleType name="vrmType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="([1-9][0-9]*|0)\.[0-9][1-9]?\.[0-9]{1,4}(-([1-9][0-9]*))?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:attributeGroup name="dataTypeAttributes">
+    <xsd:attribute name="ver"  type="vrmType"     use="required"/>
+    <xsd:attribute name="scd"  type="vrmType"     use="required"/>
+    <xsd:attribute name="root" type="addressType" use="required"/>
+  </xsd:attributeGroup>
+
+  <xsd:simpleType name="doubleType">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="-1.7976931348623158e+308"/>
+      <xsd:maxInclusive value="1.7976931348623158e+308"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="floatType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-3.402823466e+38"/>
+      <xsd:maxInclusive value="3.402823466e+38"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="addressType">
+    <xsd:restriction base="xsd:unsignedInt"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="uidType">
+    <xsd:restriction base="xsd:unsignedInt"/>
+  </xsd:simpleType>
+
+  <xsd:complexType name="pathType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="sep" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:attributeGroup name="quantifiedValueTypeAttributes">
+    <xsd:attributeGroup ref="valueTypeAttributes"/>
+    <xsd:attribute name="qty" type="xsd:unsignedInt" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:complexType name="typeInfoType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedInt">
+        <xsd:attribute name="qty" type="xsd:unsignedInt" use="optional"/>
+        <xsd:attribute name="uid" type="uidType"         use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="boolValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:boolean">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="charValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:byte">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ucharValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedByte">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="wcharValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedShort">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="shortValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:short">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ushortValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedShort">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="longValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:int">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ulongValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedInt">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+  <xsd:complexType name="nilValueType">
+    <xsd:complexContent>
+      <xsd:restriction base="xsd:anyType">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="intValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:int">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="uintValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:unsignedInt">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="floatValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="floatType">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="doubleValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="doubleType">
+        <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="stringValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="wstringValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="addressType">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="storableValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="addressType">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="customizableValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="addressType">
+        <xsd:attributeGroup ref="valueTypeAttributes"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="referenceValueType">
+    <xsd:sequence>
+      <xsd:element name="base" type="pathType"/>
+      <xsd:element name="item" type="pathType"/>
+      <xsd:element name="type" type="typeInfoType" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="lnk"  type="xsd:boolean"      use="required"/>
+    <xsd:attribute name="usg"  type="xsd:unsignedByte" use="required"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="dimensionType">
+    <xsd:restriction base="xsd:unsignedInt"/>
+  </xsd:simpleType>
+
+  <xsd:complexType name="boundsType">
+    <xsd:sequence>
+      <xsd:element name="dim" type="dimensionType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="size" type="xsd:unsignedInt" use="required"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="doubleVectorValueType">
+    <xsd:restriction base="doubleType"/>
+  </xsd:simpleType>
+
+  <xsd:complexType name="doubleVectorType">
+    <xsd:sequence>
+      <xsd:element name="dval" type="doubleVectorValueType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="size" type="xsd:unsignedInt" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="multiDoubleValueType">
+    <xsd:sequence>
+      <xsd:element name="bnds" type="boundsType"/>
+      <xsd:element name="dvec" type="doubleVectorType"/>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="quantifiedValueTypeAttributes"/>
+  </xsd:complexType>
+
+</xsd:schema>

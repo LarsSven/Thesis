@@ -1,0 +1,59 @@
+<cac:AccountingSupplierParty>
+   <cac:Party>
+      <cbc:EndpointID                      schemeID="GLN"
+                      schemeAgencyID="9">1234567890123</cbc:EndpointID>
+      <cac:PartyIdentification>
+         <cbc:ID                 schemeID="ZZZ">Supp123</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+         <cbc:Name>Salescompany ltd.</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+         <cbc:ID                 schemeID="GLN"
+                 schemeAgencyID="9">1231412341324</cbc:ID>
+         <cbc:Postbox>5467</cbc:Postbox>
+         <cbc:StreetName>Main street</cbc:StreetName>
+         <cbc:AdditionalStreetName>Suite 123</cbc:AdditionalStreetName>
+         <cbc:BuildingNumber>1</cbc:BuildingNumber>
+         <cbc:Department>Revenue department</cbc:Department>
+         <cbc:CityName>Big city</cbc:CityName>
+         <cbc:PostalZone>54321</cbc:PostalZone>
+         <cbc:CountrySubentityCode>RegionA</cbc:CountrySubentityCode>
+         <cac:Country>
+            <cbc:IdentificationCode                                    listID="ISO3166-1"
+                                    listAgencyID="6">DK</cbc:IdentificationCode>
+         </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+         <cbc:CompanyID                        schemeID="DKVAT"
+                        schemeAgencyID="ZZZ">DK12345</cbc:CompanyID>
+         <cac:TaxScheme>
+            <cbc:ID                    schemeID="UN/ECE 5153"
+                    schemeAgencyID="6">VAT</cbc:ID>
+         </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+         <cbc:RegistrationName>The Sellercompany Incorporated</cbc:RegistrationName>
+         <cbc:CompanyID                        schemeID="CVR"
+                        schemeAgencyID="ZZZ">5402697509</cbc:CompanyID>
+         <cac:RegistrationAddress>
+            <cbc:CityName>Big city</cbc:CityName>
+            <cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
+            <cac:Country>
+               <cbc:IdentificationCode>DK</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+         <cbc:Telephone>4621230</cbc:Telephone>
+         <cbc:Telefax>4621231</cbc:Telefax>
+         <cbc:ElectronicMail>antonio@salescompany.dk</cbc:ElectronicMail>
+      </cac:Contact>
+      <cac:Person>
+         <cbc:FirstName>Antonio</cbc:FirstName>
+         <cbc:FamilyName>M</cbc:FamilyName>
+         <cbc:MiddleName>Salemacher</cbc:MiddleName>
+         <cbc:JobTitle>Sales manager</cbc:JobTitle>
+      </cac:Person>
+   </cac:Party>
+</cac:AccountingSupplierParty>

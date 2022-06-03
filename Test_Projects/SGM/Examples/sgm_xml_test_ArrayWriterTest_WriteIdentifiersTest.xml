@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- AfDM, 1.6.1-61 -->
+<data ver="0.81.0" scd="1.7.7-179" root="1">
+ <arr addr="1" size="10" duplicateIDs="true">
+  <elem idx="0">
+   <array>2</array>
+  </elem>
+  <elem idx="1">
+   <nil/>
+  </elem>
+  <elem idx="2">
+   <string>wjwj &lt; lewl &gt; sal &amp; lll &apos;aaa&apos; &quot;sss&quot; &amp;&amp;&amp;; &#235; &#128;</string>
+  </elem>
+  <elem idx="3">
+   <wstring>wjwj &lt; lewl &gt; sal &amp; lll &apos;aaa&apos; &quot;sss&quot; &amp;&amp;&amp;; &#235; &#128;</wstring>
+  </elem>
+  <elem idx="4">
+   <nil/>
+  </elem>
+  <elem idx="5">
+   <nil/>
+  </elem>
+  <elem idx="6">
+   <nil/>
+  </elem>
+  <elem idx="7">
+   <nil/>
+  </elem>
+  <elem idx="8">
+   <nil/>
+  </elem>
+  <elem idx="9">
+   <array>6</array>
+  </elem>
+ </arr>
+ <arr addr="2" size="2" bwp="1" duplicateIDs="true">
+  <elem idx="0">
+   <array>3</array>
+  </elem>
+  <elem idx="1">
+   <array>5</array>
+  </elem>
+ </arr>
+ <arr addr="3" size="3" bwp="2" duplicateIDs="true">
+  <elem idx="0">
+   <array>4</array>
+  </elem>
+  <elem idx="1">
+   <nil/>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+ </arr>
+ <arr addr="4" size="4" bwp="3" duplicateIDs="true">
+  <elem idx="0">
+   <nil/>
+  </elem>
+  <elem idx="1">
+   <nil/>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+  <elem idx="3">
+   <nil/>
+  </elem>
+ </arr>
+ <arr addr="5" size="5" bwp="2" duplicateIDs="true">
+  <elem idx="0">
+   <nil/>
+  </elem>
+  <elem idx="1">
+   <nil/>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+  <elem idx="3">
+   <nil/>
+  </elem>
+  <elem idx="4">
+   <nil/>
+  </elem>
+ </arr>
+ <arr addr="6" size="6" bwp="1" duplicateIDs="true">
+  <elem idx="0">
+   <array>2</array>
+  </elem>
+  <elem idx="1">
+   <array>7</array>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+  <elem idx="3">
+   <nil/>
+  </elem>
+  <elem idx="4">
+   <nil/>
+  </elem>
+  <elem idx="5">
+   <nil/>
+  </elem>
+ </arr>
+ <arr addr="7" size="7" bwp="6" duplicateIDs="true">
+  <elem idx="0">
+   <array>2</array>
+  </elem>
+  <elem idx="1">
+   <array>8</array>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+  <elem idx="3">
+   <nil/>
+  </elem>
+  <elem idx="4">
+   <nil/>
+  </elem>
+  <elem idx="5">
+   <nil/>
+  </elem>
+  <elem idx="6">
+   <nil/>
+  </elem>
+ </arr>
+ <arr addr="8" size="8" bwp="7" duplicateIDs="true">
+  <elem idx="0">
+   <nil/>
+  </elem>
+  <elem idx="1">
+   <array>4</array>
+  </elem>
+  <elem idx="2">
+   <nil/>
+  </elem>
+  <elem idx="3">
+   <nil/>
+  </elem>
+  <elem idx="4">
+   <nil/>
+  </elem>
+  <elem idx="5">
+   <nil/>
+  </elem>
+  <elem idx="6">
+   <nil/>
+  </elem>
+  <elem idx="7">
+   <nil/>
+  </elem>
+ </arr>
+</data>

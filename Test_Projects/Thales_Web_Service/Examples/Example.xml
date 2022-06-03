@@ -1,0 +1,228 @@
+<product>
+  <productName>Print</productName>
+  <baseProductId>0</baseProductId>
+  <productIdentifier>231</productIdentifier>
+  <lifeCycleStage>DRAFT</lifeCycleStage>
+  <cloneProtection>true</cloneProtection>
+  <useVclock>true</useVclock>
+  <physicalMachineType>PlatformDefault</physicalMachineType>
+  <virtualMachineType>PlatformDefault</virtualMachineType>
+  <enforcementProductType>BASE</enforcementProductType>
+  <enforcementProtectionType>HL_or_SL_AdminMode_or_SL_UserMode</enforcementProtectionType>
+  <rehost>ENABLE</rehost>
+  <productDescription>Test</productDescription>
+  <refId1></refId1>
+  <refId2></refId2>
+  <productFeatureRef>
+    <featureId>1</featureId>
+    <actionName>NONE</actionName>
+    <productFeatureLicenseModel>
+      <actionName>NONE</actionName>
+      <licenseModel>
+        <licenseModelId>1</licenseModelId>
+        <licenseModelName>HASP Execution Count</licenseModelName>
+        <licenseType>0</licenseType>
+        <lmAttribute>
+          <attribute>
+            <attributeId>1</attributeId>
+            <attributeName>LICENSE_TYPE</attributeName>
+            <attributeType>7</attributeType>
+            <attributeValueChoice>
+              <valueOption>Time Period</valueOption>
+              <valueOption>Executions</valueOption>
+              <valueOption>Expiration Date</valueOption>
+              <valueOption>Perpetual</valueOption>
+            </attributeValueChoice>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>1</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>License Terms</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>true</saotAllowed>
+          </attribute>
+          <attributeValue>1</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>5</attributeId>
+            <attributeName>ENABLE_CONCURRENCY</attributeName>
+            <attributeType>4</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>5</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Concurrency</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>false</saotAllowed>
+          </attribute>
+          <attributeValue>FALSE</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>11</attributeId>
+            <attributeName>VIRTUAL_MACHINE_ACCESS</attributeName>
+            <attributeType>4</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>11</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Accessibility</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>false</saotAllowed>
+          </attribute>
+          <attributeValue>TRUE</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>8</attributeId>
+            <attributeName>REMOTE_DESKTOP_ACCESS</attributeName>
+            <attributeType>4</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>8</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Accessibility</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>false</saotAllowed>
+          </attribute>
+          <attributeValue>FALSE</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>7</attributeId>
+            <attributeName>COUNT_CRITERIA</attributeName>
+            <attributeType>7</attributeType>
+            <attributeValueChoice>
+              <valueOption>Login</valueOption>
+              <valueOption>Process</valueOption>
+              <valueOption>Station</valueOption>
+            </attributeValueChoice>
+            <attributeDefaultValue>0</attributeDefaultValue>
+            <displayOrder>7</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Concurrency</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>false</saotAllowed>
+          </attribute>
+          <attributeValue>0</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>2</attributeId>
+            <attributeName>EXECUTION_COUNT</attributeName>
+            <attributeType>3</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>2</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>License Terms</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>true</saotAllowed>
+          </attribute>
+          <attributeValue>1</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>9</attributeId>
+            <attributeName>NETWORK_ENABLED</attributeName>
+            <attributeType>4</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>9</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Accessibility</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>false</saotAllowed>
+          </attribute>
+          <attributeValue>FALSE</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+        <lmAttribute>
+          <attribute>
+            <attributeId>6</attributeId>
+            <attributeName>CONCURRENT_INSTANCES</attributeName>
+            <attributeType>6</attributeType>
+            <attributeDefaultValue></attributeDefaultValue>
+            <displayOrder>6</displayOrder>
+            <attributeLevel>1</attributeLevel>
+            <associatedLockCriteria></associatedLockCriteria>
+            <associatedLockCriteriaValue></associatedLockCriteriaValue>
+            <endUserPermission>0</endUserPermission>
+            <parameterGroupName>Concurrency</parameterGroupName>
+            <parameterSubGroupName></parameterSubGroupName>
+            <isvPermission>WRITE</isvPermission>
+            <nullable>false</nullable>
+            <saotAllowed>true</saotAllowed>
+          </attribute>
+          <attributeValue>10000000</attributeValue>
+          <saot>false</saot>
+        </lmAttribute>
+      </licenseModel>
+    </productFeatureLicenseModel>
+    <lmStatus>DEFINED</lmStatus>
+    <excludable>false</excludable>
+  </productFeatureRef>
+<dynamicMemoriesRef>
+<dynamicMemory>
+<memoryId>90</memoryId>
+<memories>
+<memorySegment>
+<name>seg1</name>
+<description>
+</description>
+<offset>0x0001</offset>
+<size>1</size>
+<content>00</content>
+<color>#32206f</color>
+<saot>true</saot>
+</memorySegment>
+<memorySegment>
+<name>seg2</name>
+<description>
+</description>
+<offset>0x0005</offset>
+<size>1</size>
+<content>00</content>
+<color>#d44415</color>
+<saot>true</saot>
+</memorySegment>
+</memories>
+</dynamicMemory>
+</dynamicMemoriesRef>
+</product>
