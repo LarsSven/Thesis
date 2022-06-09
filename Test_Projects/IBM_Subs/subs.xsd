@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://SubstitutionGroups"
-	xmlns:tns="http://SubstitutionGroups">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	
 	<!-- ELEMENT DECLARATIONS -->
 	
 	<xsd:element name="Name" type="xsd:string" />
-	 1 <xsd:element name="StoreName" substitutionGroup="tns:Name" type="tns:MyString" />
+	<xsd:element name="StoreName" substitutionGroup="Name" type="MyString" />
 	
-	<xsd:element name="Publication" type="tns:PublicationType" />
- 2 	<xsd:element name="Book" substitutionGroup="tns:Publication" type="tns:BookType" />
- 3 	<xsd:element name="Magazine" substitutionGroup="tns:Publication" type="tns:MagazineType" />
-		
- 4 		<xsd:element name="BookStore">
+	<xsd:element name="Publication" type="PublicationType" />
+  	<xsd:element name="Book" substitutionGroup="Publication" type="BookType" />
+	<xsd:element name="Magazine" substitutionGroup="Publication" type="MagazineType" />
+	<xsd:element name="BookStore">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="tns:Name" />
-				<xsd:element ref="tns:Publication" maxOccurs="unbounded" />
+				<xsd:element ref="Name" />
+				<xsd:element ref="Publication" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
 	
-	<xsd:element name="LiteratureStore" substitutionGroup="tns:BookStore" />
+	<xsd:element name="LiteratureStore" substitutionGroup="BookStore" />
 	
 	
 
@@ -42,10 +39,10 @@
 			<xsd:element name="Date" type="xsd:gYear" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="BookType">
 		<xsd:complexContent>
-			<xsd:extension base="tns:PublicationType">
+			<xsd:extension base="PublicationType">
 				<xsd:sequence>
 					<xsd:element name="ISBN" type="xsd:string" />
 					<xsd:element name="Publisher" type="xsd:string" />
@@ -56,7 +53,7 @@
 	
 	<xsd:complexType name="MagazineType">
 		<xsd:complexContent>
-			<xsd:restriction base="tns:PublicationType">
+			<xsd:restriction base="PublicationType">
 				<xsd:sequence>
 					<xsd:element name="Title" type="xsd:string" />
 					<xsd:element name="Date" type="xsd:gYear" />

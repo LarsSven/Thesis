@@ -409,7 +409,7 @@
   </xs:complexType>
   <xs:complexType name="dynamicMemory">
     <xs:sequence>
-      <xs:element minOccurs="1" maxOccurs="1" name="memoryId"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="memoryId" type="xs:int"/>
       <xs:element minOccurs="0" maxOccurs="1" name="memories" type="memories"/>
     </xs:sequence>
   </xs:complexType>

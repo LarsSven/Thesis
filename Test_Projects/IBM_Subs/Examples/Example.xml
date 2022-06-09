@@ -1,0 +1,23 @@
+<LiteratureStore>
+  <Name>Awesome store</Name>
+  <Publication>
+    <Title>Book1</Title>
+    <Date>2010</Date>
+  </Publication>
+  <Publication>
+    <Title>Book2</Title>
+    <Date>2010</Date>
+  </Publication>
+  <Publication>
+    <Title>Book3</Title>
+    <Date>2010</Date>
+  </Publication>
+  <Publication>
+    <Title>Book4</Title>
+    <Date>2010</Date>
+  </Publication>
+  <Publication>
+    <Title>Book5</Title>
+    <Date>2010</Date>
+  </Publication>
+</LiteratureStore>

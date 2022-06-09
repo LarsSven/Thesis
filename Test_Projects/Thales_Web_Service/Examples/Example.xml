@@ -3,16 +3,16 @@
   <baseProductId>0</baseProductId>
   <productIdentifier>231</productIdentifier>
   <lifeCycleStage>DRAFT</lifeCycleStage>
-  <cloneProtection>true</cloneProtection>
-  <useVclock>true</useVclock>
-  <physicalMachineType>PlatformDefault</physicalMachineType>
-  <virtualMachineType>PlatformDefault</virtualMachineType>
   <enforcementProductType>BASE</enforcementProductType>
   <enforcementProtectionType>HL_or_SL_AdminMode_or_SL_UserMode</enforcementProtectionType>
   <rehost>ENABLE</rehost>
+  <useVclock>true</useVclock>
+  <cloneProtection>true</cloneProtection>
+  <physicalMachineType>PlatformDefault</physicalMachineType>
+  <virtualMachineType>PlatformDefault</virtualMachineType>
   <productDescription>Test</productDescription>
-  <refId1></refId1>
-  <refId2></refId2>
+  <refId1>Test</refId1>
+  <refId2>Test</refId2>
   <productFeatureRef>
     <featureId>1</featureId>
     <actionName>NONE</actionName>
@@ -197,6 +197,9 @@
     </productFeatureLicenseModel>
     <lmStatus>DEFINED</lmStatus>
     <excludable>false</excludable>
+    <featureName>Test</featureName>
+    <featureIdentifier>10</featureIdentifier>
+    <featureDescription>This is a test</featureDescription>
   </productFeatureRef>
 <dynamicMemoriesRef>
 <dynamicMemory>
@@ -206,9 +209,9 @@
 <name>seg1</name>
 <description>
 </description>
-<offset>0x0001</offset>
-<size>1</size>
 <content>00</content>
+<size>1</size>
+<offset>0x0001</offset>
 <color>#32206f</color>
 <saot>true</saot>
 </memorySegment>
@@ -216,9 +219,9 @@
 <name>seg2</name>
 <description>
 </description>
-<offset>0x0005</offset>
-<size>1</size>
 <content>00</content>
+<size>1</size>
+<offset>0x0005</offset>
 <color>#d44415</color>
 <saot>true</saot>
 </memorySegment>
