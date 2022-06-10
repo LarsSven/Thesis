@@ -1,0 +1,35 @@
+<purchaseOrder orderDate="2022-06-10">
+  <shipTo country="US">
+    <name>Lars</name>
+    <street>6th street</street>
+    <city>New York City</city>
+    <state>New York</state>
+    <zip>10002</zip>
+  </shipTo>
+  <billTo>
+    <name>Lars</name>
+    <street>6th street</street>
+    <city>New York City</city>
+    <state>New York</state>
+    <zip>10002</zip>
+  </billTo>
+  <comment>
+    Glass package, handle carefully
+  </comment>
+  <items>
+    <item partNum="123-AB">
+      <productName>Teaglass</productName>
+      <quantity>6</quantity>
+      <USPrice>6.63</USPrice>
+      <comment>Breakable</comment>
+      <shipDate>2022-06-10</shipDate>
+    </item>
+    <item partNum="145-ER">
+      <productName>Window</productName>
+      <quantity>1</quantity>
+      <USPrice>102.34</USPrice>
+      <comment>Breakable</comment>
+      <shipDate>2022-06-10</shipDate>
+    </item>
+  </items>
+</purchaseOrder>

@@ -62,7 +62,7 @@
                 </xs:all>
               </xs:complexType>
             </xs:element>
-            <xs:element name="v2c" type="xs:base64Binary" />
+            <xs:element name="Hash" type="xs:base64Binary" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -110,7 +110,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="c2v" type="xs:base64Binary" />
+      <xs:element name="Hash" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
 

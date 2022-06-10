@@ -1,0 +1,17 @@
+<ProtectionKey>
+   <ProtectionKeyInput>
+      <action>ENABLE</action>
+      <C2V>
+         <hasp_info>
+            <haspscope>
+               <hasp id="452116054">
+                  <vendor id="37515"/>
+               </hasp>
+            </haspscope>
+            <Hash>
+               9VfXP1SV1AaimojJooZ8sCo11KZ0LZLMXN0Bdzf3pF+QvI7UWpy3UvupMhvR5B+4S4u/uItBvTe/ua+/YOHJqdBCDygP1QWfF9o5WF50MKzKpPTIoler5tarhHtTMwNRdzBkzWTiZxKekmSF5NZY8UEjpcrHYxSKUNxx0oYUyya72Y219EF/78yNCXQq0N9arne
+            </Hash>
+         </hasp_info>
+      </C2V>
+   </ProtectionKeyInput>
+</ProtectionKey>
